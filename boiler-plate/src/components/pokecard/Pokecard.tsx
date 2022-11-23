@@ -14,6 +14,7 @@ function Pokecard(values: any) {
 
 
   return (
+    <>
     <Row gutter={[10, 10]}>
         <Col>
           <Card
@@ -39,6 +40,7 @@ function Pokecard(values: any) {
           </Card>
         </Col>
     </Row>
+    </>
   );
 }
 
