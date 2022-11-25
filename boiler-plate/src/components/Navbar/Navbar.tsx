@@ -1,23 +1,22 @@
+import { useState } from "react";
+import { Menu, MenuProps } from "antd";
+import { items } from "../../constants/items-navbar";
 
-import { Menu } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { navbarMenu } from "../../constants/navbar";
 function Navbar() {
+  const [key, setkey] = useState("key");
+
+  const onClick: MenuProps["onClick"] = (e) => {
+    console.log("click ", e);
+    setkey(e.key);
+  };
   return (
     <>
-      {navbarMenu.map((button: any) => {
-        return (
-          <Menu mode="horizontal" defaultSelectedKeys={["mail"]}>
-            <Menu.Item key="mail" icon={<MailOutlined />}>
-              {button.name}
-            </Menu.Item>
-          </Menu>
-        );
-      })}
+      <Menu
+        onClick={onClick}
+        selectedKeys={[key]}
+        mode="horizontal"
+        items={items}
+      />
     </>
   );
 }
