@@ -1,8 +1,8 @@
 import { Methods } from "../interfaces/request";
 
-import Pokecard from "../components/pokecard/Pokecard";
+import Pokecard from "../components/Pokecard/Pokecard";
 import useAxios from "../plugins/Useaxios";
-import Spinload from "../components/loading/Spinload";
+
 
 
 function App2() {
