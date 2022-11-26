@@ -7,7 +7,7 @@ import useAxios from "../plugins/Useaxios";
 
 function App2() {
   
-  const { response, error } = useAxios({
+  const { response } = useAxios({
     method: Methods["get"],
     url: "/ditto",
     body: JSON.stringify({}),

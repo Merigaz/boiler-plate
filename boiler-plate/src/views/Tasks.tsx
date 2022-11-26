@@ -7,7 +7,7 @@ import { resetModal, toggleModal } from "../store/reducers/modalSlice";
 import ButtonCreate from "../components/Buttons/ButtonCreate";
 import Tasklist from "../components/Tasklist/Tasklist";
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content} = Layout;
 const { Title } = Typography;
 function App() {
   const dispatch = useDispatch();

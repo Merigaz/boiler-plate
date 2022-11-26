@@ -1,19 +1,20 @@
 import type { MenuProps } from "antd";
+import {BugFilled} from '@ant-design/icons';
 export const items: MenuProps["items"] = [
   {
+    label: <a href="/Tasks">Tasks</a>,
     key: "Tasks",
-    label: `nav ${key}`,
-    icon: "",
+    icon: <BugFilled />,
   },
   {
-    label: "Poke",
+    label: <a href="/Poke">Poke</a>,
     key: "Poke",
-    icon: "",
+    icon: <BugFilled />,
   },
   {
     label: "Navigation Three - Submenu",
     key: "SubMenu",
-    icon: "",
+    icon: <BugFilled />,
     children: [
       {
         type: "group",
@@ -49,4 +50,4 @@ export const items: MenuProps["items"] = [
     label: "",
     key: "alipay",
   },
-]
+];

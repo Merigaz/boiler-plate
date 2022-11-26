@@ -1,30 +1,37 @@
 import Main from "../views/Main";
-import App3 from "../views/App3";
 import TaskForm from "../components/Taskform/Taskform";
-import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom";
-import App2 from "../views/App2";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Poke from "../views/Poke";
 import Home from "../views/Home";
+import Tasks from "../views/Tasks";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    children:[
+    children: [
+      {
+        path: "/tasks",
+        element: <Tasks />,
+      },
       {
         path: "/poke",
-        element: <App2 />,
-      }
-    ]
+        element: <Poke />,
+      },
+    ],
   },
   {
     path: "/login",
-    element: <App2 />,
+    element: <Home />,
   },
   {
     path: "/mantenimiento",
     element: <TaskForm />,
-  }
+  },
 ]);
 const Router = () => {
   return <RouterProvider router={router} />;
-}
+};
 export default Router;
