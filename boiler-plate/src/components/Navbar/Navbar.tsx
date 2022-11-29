@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, MenuProps } from "antd";
 import { items } from "../../constants/items-navbar";
 
+
 function Navbar() {
   const [key, setkey] = useState("key");
 
@@ -11,12 +12,15 @@ function Navbar() {
   };
   return (
     <>
+  
+
       <Menu
         onClick={onClick}
         selectedKeys={[key]}
         mode="horizontal"
         items={items}
-      />
+        style={{}}
+        />
     </>
   );
 }

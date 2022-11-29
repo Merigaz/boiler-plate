@@ -1,9 +1,8 @@
+import { Image } from 'antd';
 function Logo () {
 return (
 <>
-<div>
-    <img src="../../assets.logo.png" alt="logo" />
-</div>
+<Image src={require( "../assets/logo.png")} height={50} />
 </>
 );
 }

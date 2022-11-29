@@ -56,8 +56,7 @@ function App() {
 
   return (
     <>
-      <Layout>
-        <Header style={{ backgroundColor: "#1890ff" }}>
+     
           <Row justify="end" align="middle">
             <Col>
               <Button href="/poke">poke</Button>
@@ -77,25 +76,8 @@ function App() {
               <ButtonCreate {...args} />
             </Col>
           </Row>
-        </Header>
-      </Layout>
-      <Layout>
-        <Content
-          className="site-layout-background"
-          style={{
-            padding: 24,
-            margin: 0,
-            minHeight: 800,
-          }}
-        >
-          {" "}
-          <Row>
-            <Col span={24}>
-              <Tasklist {...args} />
-            </Col>
-          </Row>
-        </Content>
-      </Layout>
+      
+    
     </>
   );
 }
