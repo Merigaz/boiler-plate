@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import ReactDOM from "react-dom/client";
 import Router from "./router/router";
 import { ConfigProvider, theme } from "antd";
+import 'antd/dist/reset.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
