@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, MenuProps } from "antd";
-import { items } from "../../constants/items-sidebar";
+import { items } from "../constants/items-sidebar";
 
 function Sidebar() {
   const [key, setkey] = useState("key");

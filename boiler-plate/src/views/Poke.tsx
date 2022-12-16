@@ -1,6 +1,7 @@
+import Pokecard from "../components/Pokecard";
 import { Methods } from "../interfaces/request";
 
-import Pokecard from "../components/Pokecard/Pokecard";
+
 import useAxios from "../plugins/Useaxios";
 
 

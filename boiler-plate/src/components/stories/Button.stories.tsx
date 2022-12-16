@@ -1,4 +1,5 @@
-import ButtonCreate from "./ButtonCreate";
+import ButtonCreate from "../ButtonCreate";
+
 
 export default {
   title: "Button",

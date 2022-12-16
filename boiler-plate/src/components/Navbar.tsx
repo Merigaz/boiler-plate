@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, MenuProps } from "antd";
-import { items } from "../../constants/items-navbar";
+import { items } from "../constants/items-navbar";
 
 
 function Navbar() {

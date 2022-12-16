@@ -1,24 +1,24 @@
 import { Layout } from "antd";
-import Spinload from "../components/Loading/Spinload";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import { Col, Row } from "antd";
 import Logo from "../components/Logo";
 import { useState } from "react";
+import Spinload from "../components/Spinload";
 const { Header, Footer, Sider, Content } = Layout;
 
 function Main() {
   const [siderCollapsed, setsiderCollapsed] = useState(true);
   return (
     <>
-      <Layout style={{ margin: 0 }}>
-        <Header style={{}}>
+      <Layout style={{height:"100vh"}}>
+        <Header>
           <Row justify="space-between" align="middle">
             <Col span={6}>
               <Logo />
             </Col>
-            <Col span={18} style={{alignSelf:"flex-end"}}>
+            <Col span={18}>
               <Navbar />
             </Col>
           </Row>
@@ -35,7 +35,7 @@ function Main() {
             <Sidebar />
           </Sider>
           <Layout >
-            <Content style={{height:850}} >
+            <Content>
               <Spinload />
               <Outlet />
             </Content>

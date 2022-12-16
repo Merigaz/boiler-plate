@@ -1,4 +1,4 @@
-import TaskList from "./Tasklist";
+import TaskList from "../Tasklist";
 
 export default {
   title: "TaskList",

@@ -1,5 +1,4 @@
 import Main from "../views/Main";
-import TaskForm from "../components/Taskform/Taskform";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,11 +6,17 @@ import {
 import Poke from "../views/Poke";
 import Home from "../views/Home";
 import Tasks from "../views/Tasks";
+import Taskform from "../components/Taskform";
+import Info from "../components/Info";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
     children: [
+      {
+        path: "/",
+        element: <Info />,
+      },
       {
         path: "/tasks",
         element: <Tasks />,
@@ -28,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/mantenimiento",
-    element: <TaskForm />,
+    element: <Taskform/>,
   },
 ]);
 const Router = () => {
