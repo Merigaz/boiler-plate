@@ -19,7 +19,7 @@ function Navbar() {
         selectedKeys={[key]}
         mode="horizontal"
         items={items}
-        style={{}}
+        style={{backgroundColor: "transparent"}}
         />
     </>
   );

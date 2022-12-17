@@ -16,6 +16,7 @@ function Sidebar() {
         selectedKeys={[key]}
         mode="vertical"
         items={items}
+        style={{ backgroundColor: "transparent"}}
       />
     </>
   );
