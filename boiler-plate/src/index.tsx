@@ -6,6 +6,8 @@ import ReactDOM from "react-dom/client";
 import Router from "./router/router";
 import { ConfigProvider, theme } from "antd";
 import "antd/dist/reset.css";
+import { componentsPrimaryTheme, primaryTheme } from "./components/styles/primaryTheme";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,10 +15,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   
-  <ConfigProvider
-    theme={{
-      algorithm: theme.defaultAlgorithm,
-    }}
+  <ConfigProvider theme={{
+    token: primaryTheme,
+    components: componentsPrimaryTheme
+  }}
     >
     <Provider store={store}>
       <StrictMode>

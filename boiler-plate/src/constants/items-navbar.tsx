@@ -1,13 +1,14 @@
 import type { MenuProps } from "antd";
 import {BugFilled} from '@ant-design/icons';
+import { Link } from "react-router-dom";
 export const items: MenuProps["items"] = [
   {
-    label: <a href="/Tasks">Tasks</a>,
+    label: <Link to="/Tasks">Tasks</Link>,
     key: "Tasks",
     icon: <BugFilled />,
   },
   {
-    label: <a href="/Poke">Poke</a>,
+    label: <Link to="/Poke">Poke</Link>,
     key: "Poke",
     icon: <BugFilled />,
   },

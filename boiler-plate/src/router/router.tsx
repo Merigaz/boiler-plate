@@ -5,9 +5,12 @@ import {
 } from "react-router-dom";
 import Poke from "../views/Poke";
 import Home from "../views/Home";
-import Tasks from "../views/Tasks";
+
+
 import Taskform from "../components/Taskform";
 import Info from "../components/Info";
+import React from "react";
+const Tasks = React.lazy(() => import('../views/Tasks'));
 const router = createBrowserRouter([
   {
     path: "/",

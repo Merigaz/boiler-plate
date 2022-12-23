@@ -22,11 +22,11 @@ function Main() {
     <Layout  style={{ backgroundColor: "transparent"}}>
 
         <Header  style={{ backgroundColor: "transparent"}} >
-          <Row justify="space-between" align="middle">
-            <Col span={6}>
+          <Row justify="space-around" align="top">
+            <Col span={8} >
               <Logo />
             </Col>
-            <Col span={18}>
+            <Col span={16}>
               <Navbar />
             </Col>
           </Row>
@@ -46,8 +46,11 @@ function Main() {
           </Sider>
           <Layout style={{ backgroundColor: "transparent"}}>
             <Content >
-              <Spinload />
-              <Outlet />
+              
+              <Spinload/>
+              < Outlet />
+             
+              
             </Content>
             <Footer style={{ backgroundColor: "transparent"}}></Footer>
           </Layout>
