@@ -1,16 +1,12 @@
 import Main from "../views/Main";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Poke from "../views/Poke";
 import Home from "../views/Home";
-
-
 import Taskform from "../components/Taskform";
 import Info from "../components/Info";
-import React from "react";
-const Tasks = React.lazy(() => import('../views/Tasks'));
+import Tasks from "../views/Tasks";
+import Themes from "../views/Themes";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +24,10 @@ const router = createBrowserRouter([
         path: "/poke",
         element: <Poke />,
       },
+      {
+        path: "/Theme",
+        element: <Themes />,
+      }
     ],
   },
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/mantenimiento",
-    element: <Taskform/>,
+    element: <Taskform />,
   },
 ]);
 const Router = () => {

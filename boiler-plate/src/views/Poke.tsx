@@ -1,24 +1,16 @@
+
 import Pokecard from "../components/Pokecard";
-import { Methods } from "../interfaces/request";
 
-
-import useAxios from "../plugins/Useaxios";
-
-
-
-function App2() {
+function Poke() {
+ 
+ 
   
-  const { response } = useAxios({
-    method: Methods["get"],
-    url: "/ditto",
-    body: JSON.stringify({}),
-    headers: JSON.stringify({}),
-  });
+ 
+    return (
 
-  let args: any = {
-    response,
-  };
-  return <Pokecard {...args}/>;
+      <Pokecard />
+      )
+
 }
 
-export default App2;
+export default Poke;

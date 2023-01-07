@@ -6,15 +6,15 @@ function Info() {
     <Row justify="space-around" align="middle" style={{height: "100%"}} >
       
       <Col span={8}>
-        <Title style={{padding:"0px 10px"}}>Lorem ipsum</Title>
-        <Paragraph style={{padding:"0px 10px"}}>
+        <Title >Lorem ipsum</Title>
+        <Paragraph >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iste
           magni nisi! Odit, voluptate dolores? Ea quidem fuga maiores omnis
           itaque labore suscipit magni animi! Vitae voluptatibus eos id rerum.
         </Paragraph>
       </Col>
       <Col span={8}>
-        <Image height={"auto"} width={"auto"} src={require("../assets/Info.png")} />
+        <Image height={"auto"} width={"auto"} src={require("../assets/Info.png")}  preview={false}/>
       </Col>
      
     </Row>

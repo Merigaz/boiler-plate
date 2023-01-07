@@ -1,14 +1,10 @@
 import { useState } from "react";
-import { Row, Col, Modal, Layout, Typography, Button } from "antd";
+import { Row, Col, Modal, Typography, Button } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { addTask, deleteTask, editTask } from "../store/reducers/taskSlice";
 import { resetModal, toggleModal } from "../store/reducers/modalSlice";
 import ButtonCreate from "../components/ButtonCreate";
 import Taskform from "../components/Taskform";
-
-
-
-const { Header, Content } = Layout;
 const { Title } = Typography;
 function App() {
   const dispatch = useDispatch();
@@ -60,7 +56,7 @@ function App() {
       <Row justify="end" align="middle">
         <Col>
           <Button href="/poke">poke</Button>
-        </Col>{" "}
+        </Col>
         <Col>
           <Title style={{ color: "#e67e22", marginBottom: 0 }}>Tasks</Title>
         </Col>

@@ -4,12 +4,23 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import { Avatar, Card, Col, Row } from "antd";
+import { useQuery } from "react-query";
+import getPokemon from "../plugins/Useaxios";
 
 
-function Pokecard(values: any) {
+
+function Pokecard() {
+  const { data, isError, isLoading } = useQuery('pokemon', getPokemon)
+
+if (isLoading) {
+  return <div>Loading...</div>
+}
+if (isError) {
+  return <div>Error! </div>
+}
   const { Meta } = Card;
-  const {response} = values
- console.log (response)
+ 
+ console.log (data)
   
 
 
@@ -21,8 +32,8 @@ function Pokecard(values: any) {
             style={{ width: 300 }}
             cover={
               <img
-                alt={response && response.name}
-                src={response && response['sprites']['other']['official-artwork']['front_default']}
+                alt={data.name}
+                src={data['sprites']['other']['official-artwork']['front_default']}
               />
             }
             actions={[
@@ -32,8 +43,8 @@ function Pokecard(values: any) {
             ]}
           >
             <Meta
-              avatar={<Avatar size={64} src={response && response['sprites']['front_default']} />}
-              title={response && response.name}
+              avatar={<Avatar size={64} src={data['sprites']['front_default']} />}
+              title={data.name}
             
               description=""
             />
